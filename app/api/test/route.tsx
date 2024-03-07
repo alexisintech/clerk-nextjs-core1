@@ -1,15 +1,16 @@
 import { clerkClient } from "@clerk/nextjs";
+import { NextResponse } from "next/server";
 
 // testclerk123 userId: user_2cSSCzV7948rhPJMsY601tXsEU4
 
-export async function TEST() {
-  const userId = 'user_2cSSCzV7948rhPJMsY601tXsEU4';
+export async function GET() {
+  const userId = "user_2cSSCzV7948rhPJMsY601tXsEU4";
 
-const params = { firstName: 'John', lastName: 'Wick' }; 
+  const params = { firstName: "John", lastName: "Wick" };
 
-const response = await clerkClient.users.updateUser(userId, params);
+  const response = await clerkClient.users.updateUser(userId, params);
 
-console.log(response);
+  console.log(response);
 
-  return Response.json({ message: "success" })
+  return NextResponse.json({ message: "success" });
 }
