@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import componentsImg from "./assets/components.svg";
 import { DownArrow, RightArrow } from "./icons";
 import "./home.css";
 
 export default function Home() {
+
   return (
     <main className="">
       <article className="grid lg:grid-cols-2">
@@ -37,9 +37,9 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div className="flex flex-col justify-center">
+        {/* <div className="flex flex-col justify-center">
           <Image src={componentsImg} alt="Clerk embeddable components" />
-        </div>
+        </div> */}
       </article>
       <article
         className="px-8 py-12 bg-black bg-opacity-5 md:px-20 md:py-24"

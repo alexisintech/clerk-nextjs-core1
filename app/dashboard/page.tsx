@@ -2,6 +2,7 @@ import { auth, clerkClient } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 import { OrgDetails, SessionDetails, UserDetails } from "./details";
 import Link from "next/link";
+import { CustomOrganizationSwitcher } from "../components/OrganizationSwitcher";
 
 export default async function DashboardPage() {
   const { userId } = auth();
@@ -35,6 +36,8 @@ export default async function DashboardPage() {
           >
             Clerk Docs -&gt;
           </Link>
+
+          <CustomOrganizationSwitcher />
         </>
       )}
     </div>
